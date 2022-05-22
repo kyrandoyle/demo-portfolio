@@ -1,0 +1,6 @@
+#rborderbox {
+    border-radius: 20px;
+    border: 1px solid rgb(241,241,241);
+    padding: 1rem;
+}
+h2 {margin-top:1em;}
