@@ -4,3 +4,8 @@
     padding: 1rem;
 }
 h2 {margin-top:1em;}
+
+.flarge {
+    font-size: 2em;
+    padding: 0;
+}
