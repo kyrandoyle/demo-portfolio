@@ -9,3 +9,30 @@ h2 {margin-top:1em;}
     font-size: 2em;
     padding: 0;
 }
+#ycirclebackground {
+    background: rgb(231, 165, 47);
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#gcirclebackground {
+    background: rgb(32, 92, 88);
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#centerVert {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;  
+}
