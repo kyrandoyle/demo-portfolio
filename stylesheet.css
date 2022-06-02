@@ -1,40 +1,80 @@
-#rborderbox {
-    border-radius: 20px;
-    border: 1px solid rgb(241,241,241);
-    padding: 1rem;
+h1 {
+    margin-top:1em;
+    font-size: 43m;
+    color:rgb(13, 36, 48);
 }
-h2 {margin-top:1em;}
+
+h2 {
+    margin-top:1em;
+    color:rgb(13, 36, 48);
+}
+
+h3 {
+    margin-top:1em;
+    color:rgb(13, 36, 48);
+}
+p {
+    color: rgb(13, 36, 48);
+}
+b {
+    color: rgb(13, 36, 48);
+}
 
 .flarge {
     font-size: 2em;
     padding: 0;
+    color: rgb(13, 36, 48);
 }
+/* skills section */
+.skillsarea {
+    background: #CCCCCC;
+    height: 33%;
+    width: 100%;
+    position: relative;
+}
+#rborderbox {
+    border-radius: 20px;
+    border: 1px solid rgb(241,241,241);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.skills {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    }
+
 #ycirclebackground {
     background: rgb(231, 165, 47);
     width: 5em;
     height: 5em;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
 }
+
 #gcirclebackground {
     background: rgb(32, 92, 88);
     width: 5em;
     height: 5em;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
 }
-#centerVert {
+
+#centervert {
     display: flex;
+    height: 200px;
     align-items: center;
     text-align: center;
     justify-content: center;  
 }
+
+.centerhoriz {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 /*For Navigation menu on mobile*/
 #circleborder {
     background: rgb(255, 255, 255);
@@ -60,7 +100,7 @@ h2 {margin-top:1em;}
   }
   
   .topnav a {
-
+    color: rgb(13, 36, 48);
     padding: 0.7em 0.7em;
     text-decoration: none;
     font-size: 1em;
@@ -83,15 +123,24 @@ h2 {margin-top:1em;}
     top: 0.5em;
   }
 
-  /*.topnav a.icon:hover {
-    background-color: #ddd;
+ .topnav a.icon:hover {
+    background-color: #ffffff;
     color: black;
-  }*/
+  }
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
     color: black;
-  
+  }
   .active {
     background-color: rgb(246, 245, 238);
-    color: white;
+    color: black;
   }
+
+
+
+  /*Media Queries*/
+  @media only screen and (max-width: 576px) {
+      .mobilehide {
+        display: none;
+      }
+    }
