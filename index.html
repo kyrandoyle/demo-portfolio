@@ -9,10 +9,10 @@
         <link href="stylesheet.css" rel="stylesheet">
     </head>
     <body>
-         <!-- Main Head section of website src https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/--> 
+    <!-- Main Head section of website src https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/--> 
          <header class="header">
             <!-- Logo -->
-            <a href="#" class="logo">LR</a>
+            <a href="#" class="logo">Kyran Doyle</a>
             <!-- Hamburger icon -->
             <input class="side-menu" type="checkbox" id="side-menu"/>
             <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
@@ -25,17 +25,24 @@
                 </ul>
             </nav>
         </header>
-
-        <div class="container-fluid">
+        <!-- Top Section DESKTOP-->  
+        <div class="main-section mobile-hide">
+           <img class="tablet-hide" src="images/main-profile-image-large.png">
+           <img class="desktop-hide" src="images/main-profile-image.png">
+           <div class="top-left"><h1>Hey There,<br/>I'm Kyran</h1></div>
+           <div class="middle-left"><a href="mailto:emailaddress@gmail.com">emailaddress@gmail.com</a></div>
+           <div class="bottom-left"><p><span class="drop-cap"><b>10</b></span> YEARS EXPERIENCE</p></div>
+           <div class="top-right">I design beautifully simple <br/>things, And I love what I do.</div>
+           <div class="bottom-right"><img src="images/designer.png"> <p>Certified<br/> UI/UX Designer</p></div>
+        </div>
+        <!-- Top Section MOBILE-->  
+        <div class="container-fluid full-screen-hide">
             <div class="row">
                 <div class="col-md-7 toptext" style="background-color:rgb(246, 245, 238);"><h1>Hey There,<br /> I'm Kyran</h1></div>
-                <div class="col-md-5 mobilehide toptextdrop" style="background-color:rgb(246, 245, 238);">I design beautifully simple things, And I love what I do.</div>
-                <div class="col-md-5 desktophide toptext" style="background-color:rgb(246, 245, 238);">I design beautifully simple things, And I love what I do.</div>
+                <div class="col-md-5 toptext" style="background-color:rgb(246, 245, 238);">I design beautifully simple things, And I love what I do.</div>
             </div>
-            <div class="row mainsection">
-                <div class="col-md-4 mobilehide toptext" style="background-color:rgb(246, 245, 238);"><h3>10 YEARS EXPERIENCE</h3></div>
+            <div class="row mainsection full-screen-hide">
                 <div class="col-md-4 centerhoriz" style="background-color:rgb(246, 245, 238);"><img src="images/main-profile-image.png" alt="Main Picture"></div>
-                <div class="col-md-4 mobilehide" style="background-color:rgb(246, 245, 238);">Certified Designer</div>
             </div>
         </div>
         <!-- Second Section -->  
@@ -134,6 +141,8 @@
                     <div class="row contactsection">
                         <div class="col-md-7">
                             <h3>Let's make something amazing together.</h3>
+                            <br/>
+                            <br/>
                             <h3>Start by saying hi...</h3>
                         </div>    
                         <!-- Contact Form Area-->

@@ -1,310 +1,384 @@
+
 /* Text Styling */
 h1 {
-    margin-top:1em;
-    font-size: 3em;
-    color:#0d2430;
+  margin-top:1em;
+  font-size: 3.5em;
+  color:#0d2430;
 }
 
 h2 {
-    margin-top:1em;
-    color:rgb(13, 36, 48);
+  margin-top:1em;
+  color:rgb(13, 36, 48);
 }
 
 h3 {
-    color:rgb(13, 36, 48);
+  color:rgb(13, 36, 48);
 }
 
 p {
-    color: rgb(13, 36, 48);
+  color: rgb(13, 36, 48);
 }
 
 b {
-    color: rgb(13, 36, 48);
+  color: rgb(13, 36, 48);
 }
 
 .flarge {
-    font-size: 2em;
-    padding: 0;
-    color: rgb(13, 36, 48);
+  font-size: 2em;
+  padding: 0;
+  color: rgb(13, 36, 48);
 }
 /* MAIN NAVIGATION */
 
 /* Theming */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
 
-:root{
-    --white: #f9f9f9;
-    --black: #36383F;
-    --gray: #85888C;
-} /* variables*/
-
 /* Reset */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body{
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 ul{
-    list-style: none;
+  list-style: none;
 }
 /* Header */
 .header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    top: 0;
-    width: 100%;
+  background-color: rgb(32, 92, 88);
+  box-shadow: 1px 1px 5px 0px gray;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index:2;
 }
 /* Logo */
 .logo{
-    display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.header a:hover{
+color: white;
 }
 /* Nav menu */
 .nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--black);
-    overflow: hidden;
-
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(32, 92, 88);;
+  overflow: hidden;
 }
 .menu a{
-    display: block;
-    padding: 30px;
-    color: var(--white);
+  display: block;
+  padding: 30px;
+  color: white;
 }
 .menu a:hover{
-    background-color: var(--gray);
+  color: rgb(231, 165, 47);
 }
 .nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
+  max-height: 0;
+  transition: max-height .5s ease-out;
 }
 /* Menu Icon */
 .hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
 }/* Style label tag */
 
 .hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
 
 } /* Style span tag */
 
 .hamb-line::before,
 .hamb-line::after{
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 .hamb-line::before{
-    top: 5px;
+  top: 5px;
 }
 .hamb-line::after{
-    top: -5px;
+  top: -5px;
 }
 
 .side-menu {
-    display: none;
+  display: none;
 } /* Hide checkbox */
 /* Toggle menu icon */
 .side-menu:checked ~ nav{
-    max-height: 100%;
+  max-height: 100%;
 }
 .side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
+  background: transparent;
 }
 .side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
+  transform: rotate(-45deg);
+  top:0;
 }
 .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
+  transform: rotate(45deg);
+  top:0;
 }
 /* Responsiveness */
 @media (min-width: 768px) {
-    .nav{
-        max-height: 80px;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
+  .nav{
+      max-height: 80px;
+      top: 0;
+      position: relative;
+      float: right;
+      width: fit-content;
+  }
+  .menu li{
+      float: left;
+  }
+  .menu a:hover{
+      background-color: transparent;
+      color: rgb(231, 165, 47);
 
-    }
+  }
 
-    .hamb{
-        display: none;
-    }
-    .side-menu:checked ~ nav{
-        max-height: 80px;
-    }
+  .hamb{
+      display: none;
+  }
+  .side-menu:checked ~ nav{
+      max-height: 80px;
+  }
 }
 
 
+/*Top Section Formating*/
+.main-section {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: black;
+  background-color: rgb(246, 245, 238);
+  padding-top: 100px;
+  z-index:1;
+}
 
+.bottom-left {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  width: 250px;
+  text-align: left;
+  font-size: 18px;
+}
 
+.top-left {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align: left;
+}
+
+.middle-left {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: black;
+  font-size: 18px;
+}  
+.middle-left a{
+  color: rgb(231, 165, 47);
+  }
+
+.middle-left a:hover{
+  color: rgb(255, 162, 0);
+  }
+
+.top-right {
+  position: absolute;
+  top: 24%;
+  right: 10%;
+  font-size: 18px;
+  text-align: left;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10%;
+  right: 13%;
+  font-size: 18px;
+}
+
+.drop-cap {
+  float: left;
+  font-size: 55px;
+  line-height: 50px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
 /*Adds formating to main section text */
 .toptext {
-    padding-left: 3em;
-    padding-top:1em;
+  padding-left: 3em;
+  padding-top:1em;
 }
 .toptextdrop {
-    padding-left: 3em;
-    padding-top:7em;
+  padding-left: 3em;
+  padding-top:7em;
 }
 
 .bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: bottom;
 }
 
 
 /* Skills section */
 .skillsarea {
-    background: #CCCCCC;
-    height: 33%;
-    width: 100%;
-    position: relative;
+  background: #CCCCCC;
+  height: 33%;
+  width: 100%;
+  position: relative;
 }
 #rborderbox {
-    border-radius: 20px;
-    border: 1px solid rgb(241,241,241);
-    padding: 1rem;
-    width: 95%;
-    height: 6.5em;
-    margin: 1%;
+  border-radius: 20px;
+  border: 1px solid rgb(241,241,241);
+  padding: 1rem;
+  width: 95%;
+  height: 6.5em;
+  margin: 1%;
 }
 .skills {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    }
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  }
 
 #ycirclebackground {
-    background: rgb(231, 165, 47);
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
+  background: rgb(231, 165, 47);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
 }
 
 #gcirclebackground {
-    background: rgb(32, 92, 88);
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
+  background: rgb(32, 92, 88);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
 }
 
 #centervert {
-    display: flex;
-    height: 200px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;  
+  display: flex;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;  
 }
 
 .centerhoriz {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*Portfolio Section*/
 .portgreen {
-    margin: 1em;
-    padding: 1.5em;
-    width: 20em;
-    height: 20em;
-    border-radius: 2em;
-    background-color:rgb(32, 92, 88);
-    color: white;
+  margin: 1em;
+  padding: 1.5em;
+  width: 20em;
+  height: 20em;
+  border-radius: 2em;
+  background-color:rgb(32, 92, 88);
+  color: white;
 }
 .portgreen:hover {
-    opacity: 90%;
+  opacity: 90%;
 }
 .portyellow {
-    margin: 1em;
-    padding: 1.5em;
-    width: 20em;
-    height: 20em;
-    border-radius: 2em;
-    background-color:rgb(231, 165, 47);
-    color: white;
+  margin: 1em;
+  padding: 1.5em;
+  width: 20em;
+  height: 20em;
+  border-radius: 2em;
+  background-color:rgb(231, 165, 47);
+  color: white;
 }
 .portyellow:hover {
-    opacity: 90%;
+  opacity: 90%;
 }
 
 .portcontent{
-    color: white;
+  color: white;
 
 }
 
 /*Contact Form*/
 input {
-    margin: 1%;
-    padding: 1%;
-    width: 24em;
+  margin: 1%;
+  padding: 1%;
+  width: 24em;
 }
 
 #submitButton {
-    background-color: white;
-    border: 1px solid rgb(32, 92, 88);
-    border-radius: 0.25em;
-    width: 6em;
-    color:rgb(32, 92, 88);
+  background-color: white;
+  border: 1px solid rgb(32, 92, 88);
+  border-radius: 0.25em;
+  width: 6em;
+  color:rgb(32, 92, 88);
 }
 
 #submitButton:hover {
-    background-color:rgb(32, 92, 88);
-    color: white;
+  background-color:rgb(32, 92, 88);
+  color: white;
 }
 
 .contactsection {
-    padding: 3em;
-    }
-  /*Media Queries*/
+  padding: 3em;
+  }
+/*Media Queries*/
 
-  /*hides content on mobile*/
-  @media only screen and (max-width: 768px) {
-      .mobilehide {
+/*hides content on mobile*/
+@media only screen and (max-width: 768px) {
+    .mobile-hide {
+      display: none;
+    }
+  }
+
+  /*hide content on desktops*/
+  @media only screen and (min-width: 992px) {
+      .desktop-hide {
         display: none;
       }
     }
-
-    /*hide content on desktops*/
-    @media only screen and (min-width: 768px) {
-        .desktophide {
-          display: none;
-        }
+/*hides content on tablets*/
+@media only screen and (max-width: 992px) {
+  .tablet-hide {
+    display: none;
+  }
+}
+  /*hide content on desktops*/
+  @media only screen and (min-width: 768px) {
+      .full-screen-hide {
+        display: none;
       }
-
+    }
