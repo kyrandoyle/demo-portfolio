@@ -1,8 +1,8 @@
 /* Text Styling */
 h1 {
     margin-top:1em;
-    font-size: 43m;
-    color:rgb(13, 36, 48);
+    font-size: 3em;
+    color:#0d2430;
 }
 
 h2 {
@@ -27,6 +27,167 @@ b {
     padding: 0;
     color: rgb(13, 36, 48);
 }
+/* MAIN NAVIGATION */
+
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* Header */
+.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+}
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+/* Responsiveness */
+@media (min-width: 768px) {
+    .nav{
+        max-height: 80px;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+    .side-menu:checked ~ nav{
+        max-height: 80px;
+    }
+}
+
+
+
+
+/*Adds formating to main section text */
+.toptext {
+    padding-left: 3em;
+    padding-top:1em;
+}
+.toptextdrop {
+    padding-left: 3em;
+    padding-top:7em;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: bottom;
+}
+
 
 /* Skills section */
 .skillsarea {
@@ -76,71 +237,6 @@ b {
     display: flex;
     justify-content: center;
 }
-
-
-
-/*For Navigation menu on mobile*/
-#circleborder {
-    background: rgb(255, 255, 255);
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    padding: 1em 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-/*NAVBAR*/
-.topnav {
-    overflow: hidden;
-    background-color: rgb(246, 245, 238);
-    position: relative;
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    color: rgb(13, 36, 48);
-    padding: 0.7em 0.7em;
-    text-decoration: none;
-    font-size: 1em;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    background: rgb(255, 255, 255);
-    color:rgb(32, 92, 88);
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    padding: 1em 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    right: 2em;
-    top: 0.5em;
-  }
-
- .topnav a.icon:hover {
-    background-color: #ffffff;
-    color: black;
-  }
-
-  .topnav a:hover {
-    background-color: #ffffff;
-    color: black;
-  }
-
-  .active {
-    background-color: rgb(246, 245, 238);
-    color: black;
-  }
 
 /*Portfolio Section*/
 .portgreen {
@@ -197,8 +293,18 @@ input {
     padding: 3em;
     }
   /*Media Queries*/
-  @media only screen and (max-width: 576px) {
+
+  /*hides content on mobile*/
+  @media only screen and (max-width: 768px) {
       .mobilehide {
         display: none;
       }
     }
+
+    /*hide content on desktops*/
+    @media only screen and (min-width: 768px) {
+        .desktophide {
+          display: none;
+        }
+      }
+
